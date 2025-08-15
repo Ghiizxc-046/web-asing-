@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — [ceo perusahaan besar in USA]</title>
+  <meta name="description" content="Portofolio pribadi: About, Blog, Testimonial, Contact" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Dark mode toggle + persist
+    const userTheme = localStorage.getItem('theme');
+    if (userTheme === 'dark' || (!userTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style>
+    /* fallback if image loads slowly */
+    .hero-grad { background: radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,.3), rgba(255,255,255,0)), linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.6)); }
+  </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200 dark:border-slate-800">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#home" class="font-bold tracking-tight text-xl">[web terlarang]</a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#blog" class="hover:text-blue-600">Blog</a>
+        <a href="#testimonials" class="hover:text-blue-600">Testimonial</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition">Hire Me</a>
+        <button id="themeToggle" aria-label="Toggle theme" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364-1.414-1.414M6.05 6.05 4.636 4.636m12.728 0-1.414 1.414M6.05 17.95l-1.414 1.414"/><circle cx="12" cy="12" r="4"/></svg>
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-700" aria-label="Open menu" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur">
+      <div class="px-4 py-3 space-y-2">
+        <a href="#about" class="block py-2">About</a>
+        <a href="#blog" class="block py-2">Blog</a>
+        <a href="#testimonials" class="block py-2">Testimonial</a>
+        <a href="#contact" class="block py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative">
+    <div class="relative isolate">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2000&auto=format&fit=crop" alt="Foto pegunungan" class="w-full h-[70vh] object-cover"/>
+      <div class="absolute inset-0 hero-grad"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-white">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">Halo, saya <span class="text-blue-200">[seorang ceo di perusahaan besar]</span></h1>
+          <p class="mt-4 max-w-2xl text-lg sm:text-xl text-blue-50">Frontend / Backend / UI-UX — saya membangun produk web yang cepat, rapi, dan menyenangkan digunakan.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="rounded-xl bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700">Hubungi Saya</a>
+            <a href="#projects" class="rounded-xl border border-white/70 px-6 py-3 font-medium hover:bg-white/10">Lihat Proyek</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold">Tentang Saya</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">Saya seorang developer yang fokus pada performa, aksesibilitas, dan detail. Berpengalaman membangun aplikasi skala kecil hingga menengah menggunakan React, Next.js, Node.js, dan Tailwind CSS.</p>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+            <li class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>Responsif & Mobile-first</li>
+            <li class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>SEO & Aksesibilitas</li>
+            <li class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>CI/CD dasar</li>
+            <li class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>Kolaborasi tim</li>
+          </ul>
+          <div class="mt-8 flex gap-3">
+            <a href="#" class="rounded-xl border px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800">Download CV</a>
+            <a href="#contact" class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-2">Ajukan Proyek</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-square rounded-3xl overflow-hidden shadow-xl ring-1 ring-slate-200 dark:ring-slate-700">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop" alt="Laptop dan workspace" class="h-full w-full object-cover" />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-2xl shadow p-4 border border-slate-200 dark:border-slate-700">
+            <p class="text-sm">3+ tahun pengalaman • 20+ proyek</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (optional anchor for button) -->
+  <section id="projects" class="py-16 bg-slate-50 dark:bg-slate-800/30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between">
+        <h2 class="text-2xl md:text-3xl font-bold">Proyek Pilihan</h2>
+        <a href="#contact" class="text-sm underline">Butuh sesuatu yang mirip?</a>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card -->
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="Dashboard project" class="h-44 w-full object-cover"/>
+          <div class="p-5">
+            <h3 class="font-semibold group-hover:underline">Dashboard Analitik</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">React, Tailwind, Charting — fokus pada performa dan UX.</p>
+          </div>
+        </article>
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" alt="E-commerce" class="h-44 w-full object-cover"/>
+          <div class="p-5">
+            <h3 class="font-semibold group-hover:underline">E‑Commerce Minimal</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Next.js, Stripe, ISR — katalog cepat dengan checkout aman.</p>
+          </div>
+        </article>
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1519336555923-59661f41bbf7?q=80&w=1200&auto=format&fit=crop" alt="Landing page" class="h-44 w-full object-cover"/>
+          <div class="p-5">
+            <h3 class="font-semibold group-hover:underline">Landing Page SaaS</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">A/B test hero, copy, CTA untuk konversi maksimal.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between">
+        <h2 class="text-3xl font-bold">Blog</h2>
+        <a href="#" class="text-sm underline">Semua artikel</a>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:shadow-lg">
+          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="Artikel 1" class="h-44 w-full object-cover"/>
+          <div class="p-6">
+            <h3 class="font-semibold">Menyusun Desain Sistem Komponen</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Cara membangun design system reusable dengan Tailwind.</p>
+            <a href="#" class="mt-3 inline-block text-sm text-blue-600 hover:underline">Baca →</a>
+          </div>
+        </article>
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:shadow-lg">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop" alt="Artikel 2" class="h-44 w-full object-cover"/>
+          <div class="p-6">
+            <h3 class="font-semibold">Optimasi Performa Next.js</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">ISR, caching, dan tips praktis agar TTFB tetap rendah.</p>
+            <a href="#" class="mt-3 inline-block text-sm text-blue-600 hover:underline">Baca →</a>
+          </div>
+        </article>
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:shadow-lg">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" alt="Artikel 3" class="h-44 w-full object-cover"/>
+          <div class="p-6">
+            <h3 class="font-semibold">Aksesibilitas Tanpa Drama</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Checklist sederhana untuk situs yang ramah semua orang.</p>
+            <a href="#" class="mt-3 inline-block text-sm text-blue-600 hover:underline">Baca →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-20 bg-slate-50 dark:bg-slate-800/30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold">Testimonial</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm">
+          <blockquote class="text-sm text-slate-700 dark:text-slate-300">“Kerja cepat, komunikatif, dan hasilnya rapi. Landing page kami konversinya naik 35%.”</blockquote>
+          <figcaption class="mt-4 font-medium">— Rina, Founder SaaS</figcaption>
+        </figure>
+        <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm">
+          <blockquote class="text-sm text-slate-700 dark:text-slate-300">“Code review yang detail bikin tim kami level up. Highly recommended.”</blockquote>
+          <figcaption class="mt-4 font-medium">— Adi, Lead Engineer</figcaption>
+        </figure>
+        <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm">
+          <blockquote class="text-sm text-slate-700 dark:text-slate-300">“Desain clean, performa kencang, dan tepat deadline.”</blockquote>
+          <figcaption class="mt-4 font-medium">— Siti, PM E‑Commerce</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold">Contact Me</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Ada ide atau proyek? Kirim pesan lewat form di bawah, saya akan balas secepatnya.</p>
+      <form class="mt-8 grid gap-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-medium">Nama</label>
+            <input id="name" type="text" placeholder="Nama kamu" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input id="email" type="email" placeholder="email@domain.com" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+          </div>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium">Pesan</label>
+          <textarea id="message" rows="5" placeholder="Ceritakan kebutuhanmu..." class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" class="rounded-xl bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700">Kirim</button>
+        <p class="text-xs text-slate-500">*Form ini demo saja. Hubungkan ke backend (Formspree/Netlify/Server) untuk produksi.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm">© <span id="year"></span> [Namamu]. All rights reserved.</p>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="#" class="hover:underline">LinkedIn</a>
+        <a href="#" class="hover:underline">GitHub</a>
+        <a href="#" class="hover:underline">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle logic
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const root = document.documentElement;
+      const isDark = root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
